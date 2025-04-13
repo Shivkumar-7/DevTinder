@@ -56,6 +56,7 @@ app.listen(3000, () => {
 //So make API req handler like this
 
 app.get("/user", (req, res) => {
+     console.log(req.query); //to read the query parameter {http://localhost:3000/user?userId=101&password=shiv}
      res.send({firstName : "Shiv", lastname : "Thakur"});
 });
 
@@ -70,10 +71,18 @@ app.delete("/user", (req, res) => {
 });
 
 //Advance Routing Concepts
-//It will work for /ac, /abc, /ab
-app.get("/ab?c", (req, res) => {
+//It will work for anything that ends with only fly {/butterfly, /camefly}
+app.get("/.*fly$", (req, res) => {
     res.send({firstName : "Shiv", lastName : "Kumar"});
 });
+//colon means that its a dynamic route
+
+app.get("/a/:userId/:name/:password", (req, res) => {
+   console.log(req.params); //all parameters {http://localhost:3000/a/090/Akshay/kumar}
+     res.send({firstName : "Shiv", lastName : "Kumar"});
+ });
+ 
+
 
 
 

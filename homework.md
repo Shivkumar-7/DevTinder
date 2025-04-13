@@ -12,3 +12,6 @@
 --> Now {git commit -m "message"} Now I have commit all code in master {main branch} now want to push all code to github {remote repo as i am on local repo}
 --> Go to {github.com/new} Now want to push an existing repo from command line run codes {Happy All code on github Now}
 --> difference b/w package.json vs package-lock.json
+
+--> Explore routing and Use of regex in routes /a/ , /.*fly%/
+--> Reading query in params in routes and reading dynamic routes
